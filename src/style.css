@@ -1,27 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 :root {
-  /* Theme 1 : dark-blue */
-  --clr-main-1: hsl(225, 21%, 49%);
-  --clr-toggle-1: hsl(223, 31%, 20%);
-  --clr-screen-1: hsl(224, 36%, 15%);
-  --clr-key-1: hsl(225, 21%, 49%);
-  --clr-key-shadow-1: hsl(224, 28%, 35%);
-  --clr-key-toggle-1: hsl(6, 63%, 50%);
-  --clr-key-shadow-1: hsl(6, 70%, 34%);
-  --clr-key-light-grayish-1: hsl(30, 25%, 89%);
-  --clr-key-grayish-1: hsl(28, 16%, 65%);
-  --clr-text-1: hsl(221, 14%, 31%);
-  --clr-white: hsl(0, 0, 100%);
+        /* =====COLORS======  */
+  
+  /* Theme 1 */
+  --clr1-bg-main: hsl(222, 26%, 31%);
+  --clr1-bg-toggle: hsl(223, 31%, 20%);
+  --clr1-bg-screen: hsl(224, 36%, 15%);
+  
+  --clr1-key-bg1 : hsl(225, 21%, 49%);
+  --clr1-key-sh1 : hsl(224, 28%, 35%);
+  --clr1-key-bg2 : hsl(30, 25%, 89%);
+  --clr1-key-sh2 : hsl(28, 16%, 65%);
+  --clr1-key-toggle-bg : hsl(6, 63%, 50%);
+  --clr1-key-toggle-sh : hsl(6, 70%, 34%);
+  
+  --clr1-txt-white : hsl(0, 0, 100%);
+  --clr1-text : hsl(221, 14%, 31%);
 
-    /* Theme 1 : dark-blue */
-    --clr-main-2: hsl(0, 0%, 90%);
-    --clr-toggle-2: hsl(0, 5%, 81%);
-    --clr-screen-2: hsl(0, 0%, 93%);
-    --clr-key-2: hsl(185, 42%, 37%);
-    --clr-key-shadow-2: hsl(185, 58%, 25%);
-    --clr-key-toggle-2: hsl(25, 98%, 40%);
-    --clr-key-shadow-2: hsl(25, 99%, 27%);
-    --clr-key-light-grayish-1: hsl(45, 7%, 89%);
-    --clr-key-grayish-1: hsl(35, 11%, 61%);
-    --clr-text-1: hsl(60, 10%, 19%);
-    --clr-white: hsl(0, 0, 100%);
+  /* Theme 2 */
+  --clr2-bg-main: hsl(0, 0%, 90%);
+  --clr2-bg-toggle: hsl(0, 5%, 81%);
+  --clr2-bg-screen: hsl(0, 0%, 93%);
+  
+  --clr2-key-bg1 : hsl(185, 42%, 37%);
+  --clr2-key-sh1 : hsl(185, 58%, 25%);
+  --clr2-key-bg2 : hsl(45, 7%, 89%);
+  --clr2-key-sh2 : hsl(35, 11%, 61%);
+  --clr2-key-toggle-bg : hsl(25, 98%, 40%);
+  --clr2-key-toggle-sh : hsl(25, 99%, 27%);
+  
+  --clr2-txt-white : hsl(0, 0, 100%);
+  --clr2-text : hsl(60, 10%, 19%);
+
+      /* Theme 3 */
+  --clr3-bg-main: hsl(281, 89%, 26%);
+  --clr3-bg-toggle: hsl(285, 91%, 52%);
+  --clr3-bg-screen: hsl(0, 0%, 93%);
+  
+  --clr3-key-bg1 : hsl(185, 42%, 37%);
+  --clr3-key-sh1 : hsl(185, 58%, 25%);
+  --clr3-key-bg2 : hsl(268, 47%, 21%);
+  --clr3-key-sh2 : hsl(290, 70%, 36%);
+  --clr3-key-toggle-bg : hsl(176, 100%, 44%);
+  --clr3-key-toggle-sh : hsl(177, 92%, 70%);
+  
+  --clr3-txt-white : hsl(0, 0, 100%);
+  --clr3-text : hsl(198, 20%, 13%);
+  --clr3-txt2: hsl(52, 100%, 62%);
+
+        /* =====FONT======  */
+  --fs : 32px;
+  --ff : 'Roboto', sans-serif;
+  --fw : 700;
+  --width-mobile: 375px;
+  --width-desktop: 1440px;
+  --br: 5px;
+}
+
+*, ::after, ::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--clr1-bg-main);
+  font-family: var(--ff);
+  font-weight: var(--fw);
+  font-size: var(--fs);
+}
+h2 {
+  font-size: 1.2rem;
+}
+h3 {
+  font-size: 0.75rem;
+}
+span {
+  font-style: 0.2rem;
+}
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: var(--width-mobile);
+  padding: 1rem;
+}
+.flex-sb {
+  display: flex;
+  justify-content: space-between;
+}
+.theme {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+}
+.toggle-btn {
+  background-color: var(--clr1-bg-toggle);
+  max-height: fit-content;
+}
+.toggle-btn button {
+  background-color: red;
+  height: 15px;
+  width: 15px;
+  border: none;
+  border-radius: 50%;
+}
+#result {
+  background-color: var(--clr1-bg-screen);
+  height: 4rem;
+  width: 100%;
+  margin: 1rem 0;
+  border: none;
+  border-radius: var(--br);
+}
+.grid-btn {
+  background-color: var(--clr1-key-bg2);
+  padding: 15px;
+  display: grid;
+  display: -ms-grid;
+  gap: 10px;
+  -ms-grid-columns: auto auto auto auto;
+  border-radius: var(--br);
+  background-color: var(--clr1-bg-toggle);
+}
+#reset {
+  grid-column: 1/3;
+}
+#equal {
+  grid-column: 3/5;
+}
+.btn {
+  font-family: inherit;
+  font-weight: var(--fw);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: var(--fw);
+  min-width: 40px;
+  min-height: 55px;
+  border: 2px solid black;
+  border-radius: var(--br);
+  background-color: var(--clr1-key-bg2);
+}
+.btn-2 {
+  height: 2.5rem;
+  font-family: inherit;
+  font-weight: var(--fw);
+  font-size: 1rem;
+  text-transform: uppercase;
+  min-height: 55px;
+  border: 2px solid black;
+  border-radius: var(--br);
 }
