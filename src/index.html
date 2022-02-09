@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="theme-c">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,17 +10,24 @@
 	<main>
 		<div class="container">
 		<!-- heading -->
-			<section class="flex-sb">
-				<h2>calc</h2>
-				<div class="theme">
-					<h2>theme</h2>
-						<button></button>
-						<button></button>
-						<button></button>
-				</div>
-			</section>
+			<header>
+				<ul>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+				</ul>			
+				<section class="theme-container">
+					<h2 id="title">calc</h2>
+					<div class="theme">
+						<h3 id="theme-title">theme</h3>
+						<button class="toggle-btn">
+							<p class="switch theme3"></p>
+						</button>
+					</div>
+				</section>				
+			</header>
 			<!-- output -->
-			<input type="text" name="result" id="result" readonly> 
+			<input type="text" name="result" id="result" placeholder="0"> 
 
 			<!-- input -->
 			<section class="input">
