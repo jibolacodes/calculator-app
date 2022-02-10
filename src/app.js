@@ -46,14 +46,14 @@ btns.forEach(function(btn){
 			const firstValue = input.dataset.firstValue;
 			const secondValue = displayedNum;
 
-			if(firstValue && operator){
-				display.value = calculate(firstValue, operator, secondValue);
-			}
+			// if(firstValue && operator){
+			// 	display.value = calculate(firstValue, operator, secondValue);
+			// }
 
-			//creates new custom attribute in input
-			input.dataset.operator = element;
-			input.dataset.firstValue = displayedNum;
-			input.dataset.prevSymbol = 'operator';
+			// //creates new custom attribute in input
+			// input.dataset.operator = element;
+			// input.dataset.firstValue = displayedNum;
+			// input.dataset.prevSymbol = 'operator';
 		}
 
 		if(element === 'calculate'){
@@ -86,18 +86,4 @@ function calculate(a,operator,b){
 		result = 0;
 	}
 	return result;
-	// 	switch(operation){
-	// 	case (operator === 'add'): 
-	// 		result = parseFloat(a) + parseFloat(b);
-	// 		break;
-	// 	case (operator === 'subtract'): 
-	// 		result = parseFloat(a) - parseFloat(b);
-	// 		break;
-	// 	case (operator === 'multiply'): 
-	// 		result = parseFloat(a) * parseFloat(b);
-	// 		break;
-	// 	case (operator === 'divide'): 
-	// 		result = parseFloat(a) / parseFloat(b);
-	// 		break;
-	// }
 }
