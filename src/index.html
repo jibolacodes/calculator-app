@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" class="theme-c">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
 	<title>Calculator</title>
 </head>
-<body>
+<body class="body theme-a">
 	<main>
 		<div class="container">
 		<!-- heading -->
@@ -21,39 +21,39 @@
 					<div class="theme">
 						<h3 id="theme-title">theme</h3>
 						<button class="toggle-btn">
-							<p class="switch theme3"></p>
+							<p class="switch"></p>
 						</button>
 					</div>
 				</section>				
 			</header>
 			<!-- output -->
-			<input type="text" name="result" id="result" placeholder="0"> 
-
+			<input type="text" name="result" id="display" readonly> 
 			<!-- input -->
 			<section class="input">
 				<div class="grid-btn">
-					<button class="btn" id="seven">7</button>
-					<button class="btn" id="eight">8</button>
-					<button class="btn" id="nine">9</button>
-					<button class="btn" id="del">del</button>
-					<button class="btn" id="four">4</button>
-					<button class="btn" id="five">5</button>
-					<button class="btn" id="six">6</button>
-					<button class="btn" id="plus">+</button>
-					<button class="btn" id="one">1</button>
-					<button class="btn" id="two">2</button>
-					<button class="btn" id="three">3</button>
-					<button class="btn" id="minus">-</button>
-					<button class="btn" id="point">.</button>
-					<button class="btn" id="zero">0</button>
-					<button class="btn" id="divide">/</button>
-					<button class="btn" id="multiply">x</button>
-					<button class="btn-2" id="reset">reset</button>
-					<button class="btn-2" id="equal">=</button>
+					<button class="btn">7</button>
+					<button class="btn">8</button>
+					<button class="btn">9</button>
+					<button class="btn del" data-action='delete'>del</button>
+					<button class="btn">4</button>
+					<button class="btn">5</button>
+					<button class="btn">6</button>
+					<button class="btn plus" data-action='add'>+</button>
+					<button class="btn">1</button>
+					<button class="btn">2</button>
+					<button class="btn">3</button>
+					<button class="btn minus" data-action='subtract'>-</button>
+					<button class="btn point" data-action='decimal'>.</button>
+					<button class="btn" >0</button>
+					<button class="btn divide" data-action='divide'>/</button>
+					<button class="btn multiply" data-action='multiply'>x</button>
+					<button class="btn reset" data-action='reset'>reset</button>
+					<button class="btn equal" data-action='calculate'>=</button>
 				</div>
 			</section>
 		</div>
 	</main>
+	<script src="app.js"></script>
 </body>
 </html>
 
