@@ -1,6 +1,5 @@
 const body = document.querySelector('.body');
 const input = document.querySelector('.input');
-const toggleBtn = document.querySelector('.toggle-btn');
 const display = document.getElementById('display');
 const switchBtns = document.querySelectorAll('.switch');
 const btns = document.querySelectorAll('.btn');
