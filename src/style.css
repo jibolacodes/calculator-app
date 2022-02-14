@@ -6,6 +6,7 @@
   --width-mobile: 375px;
   --width-desktop: 1440px;
   --br: 5px;
+  --transition: 1s;
 }
 
 *, ::after, ::before {
@@ -142,10 +143,11 @@ li {
 .switch:nth-child(2) {
   position: absolute;
 }
-.switch-a {
+.red-btn {
   background-color: var(--clr-key-toggle-bg);
   position: relative;
   z-index: 2;
+  transition: var(--transition);
 }
 #display:focus {
   outline: none;

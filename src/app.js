@@ -74,24 +74,8 @@ btns.forEach(function(btn){
 		}
 	})
 })
-	
-function calculate(a,operator,b){
-	let result = '';
-	if(operator === 'add'){
-		result = parseFloat(a) + parseFloat(b);
-	} else if(operator === 'subtract'){
-		result = parseFloat(a) - parseFloat(b);
-	} else if(operator === 'multiply'){
-		result = parseFloat(a) * parseFloat(b);
-	} else if(operator === 'divide'){
-		result = parseFloat(a) / parseFloat(b);
-	} else if(operator === 'reset'){
-		result = 0;
-	}
-	return result;
-}
 
-const redBtn = document.querySelector('.switch-a');
+const redBtn = document.querySelector('.red-btn');
 
 switchBtns.forEach(function(switchBtn){
 	switchBtn.addEventListener('click', function(e){
@@ -114,3 +98,20 @@ switchBtns.forEach(function(switchBtn){
 		}
 	})
 })
+	
+function calculate(a,operator,b){
+	let result = '';
+	if(operator === 'add'){
+		result = parseFloat(a) + parseFloat(b);
+	} else if(operator === 'subtract'){
+		result = parseFloat(a) - parseFloat(b);
+	} else if(operator === 'multiply'){
+		result = parseFloat(a) * parseFloat(b);
+	} else if(operator === 'divide'){
+		result = parseFloat(a) / parseFloat(b);
+	} else if(operator === 'reset'){
+		result = 0;
+	}
+	return result;
+}
+
