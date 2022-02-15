@@ -9,8 +9,9 @@ display.value = 0;
 btns.forEach(function(btn){
 	btn.addEventListener('click', function(e){
 		const element = e.target.dataset.action;
-		keyContent = e.target.textContent;
-		displayedNum = display.value;
+		let keyContent = e.target.textContent;
+		let displayedNum = display.value;
+
 		const prevSymbol = input.dataset.prevSymbol;
 
 		//display numbers
@@ -48,7 +49,7 @@ btns.forEach(function(btn){
 			const firstValue = input.dataset.firstValue;
 			const secondValue = displayedNum;
 
-			if(firstValue && operator && prevSymbol !== 'operator'){
+			if(firstValue && operator && prevSymbol === 'operator'){
 				display.value = calculate(firstValue, operator, secondValue);
 			}
 
@@ -75,12 +76,31 @@ btns.forEach(function(btn){
 	})
 })
 
+function calculate(a,operator,b){
+	let result = '';
+	if(operator === 'add'){
+		result = parseFloat(a) + parseFloat(b);
+	} else if(operator === 'subtract'){
+		result = parseFloat(a) - parseFloat(b);
+	} else if(operator === 'multiply'){
+		result = parseFloat(a) * parseFloat(b);
+	} else if(operator === 'divide'){
+		result = parseFloat(a) / parseFloat(b);
+	} else if(operator === 'reset'){
+		result = 0;
+	}if(!operator){
+		result = b;
+	}
+	return result;
+}
+
 const redBtn = document.querySelector('.red-btn');
+
+
 
 switchBtns.forEach(function(switchBtn){
 	switchBtn.addEventListener('click', function(e){
 		const id = e.target.dataset.id
-		console.log(id)
 		if(id === '1'){
 			redBtn.style.left = '0';
 			body.classList.add('theme-a');
@@ -99,19 +119,6 @@ switchBtns.forEach(function(switchBtn){
 	})
 })
 	
-function calculate(a,operator,b){
-	let result = '';
-	if(operator === 'add'){
-		result = parseFloat(a) + parseFloat(b);
-	} else if(operator === 'subtract'){
-		result = parseFloat(a) - parseFloat(b);
-	} else if(operator === 'multiply'){
-		result = parseFloat(a) * parseFloat(b);
-	} else if(operator === 'divide'){
-		result = parseFloat(a) / parseFloat(b);
-	} else if(operator === 'reset'){
-		result = 0;
-	}
-	return result;
-}
-
+window.addEventListener('DOMContentLoaded', function(){
+	let themes = ['theme-a', 'theme-b', 'theme-c'];
+})
